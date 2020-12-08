@@ -35,13 +35,14 @@ public class GucciItemPage extends Page {
 
 
     public GucciItemPage closePopUps() {
-        if(new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
-                .until(ExpectedConditions.visibilityOf(closeCookiesMessageButton))!=null) {
-                closeCookiesMessageButton.click();
-        }
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOf(closeCookiesMessageButton));
         closeCookiesMessageButton.click();
+            
+        if(new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(closeAdButton))) {
+            closeAdButton.click();
+        }
         return this;
     }
 
