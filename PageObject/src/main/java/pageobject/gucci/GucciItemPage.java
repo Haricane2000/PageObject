@@ -38,11 +38,6 @@ public class GucciItemPage extends Page {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOf(closeCookiesMessageButton));
         closeCookiesMessageButton.click();
-            
-        if(new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
-                .until(ExpectedConditions.visibilityOf(closeAdButton)) != null) {
-            closeAdButton.click();
-        }
         return this;
     }
 
